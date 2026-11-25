@@ -1,0 +1,6 @@
+pandas
+rouge-score
+sacrebleu
+transformers
+torch
+datasets

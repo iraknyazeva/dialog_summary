@@ -1,0 +1,8 @@
+seed: 42
+
+test_path: "test.csv"
+train_path: "train.csv"
+val_path: "validation.csv"
+
+text_column: "dialogue"
+summary_column: "summary"
