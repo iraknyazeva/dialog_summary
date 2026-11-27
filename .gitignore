@@ -223,3 +223,9 @@ __marimo__/
 .streamlit/secrets.toml
 
 *.csv
+
+models/
+
+huggingface_tokenizers_cache/
+
+unsloth_compiled_cache/

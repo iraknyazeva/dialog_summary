@@ -1,0 +1,22 @@
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"
+seed: 42
+
+# данные
+num_samples: 2500
+
+# LoRA
+r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+# обучение
+num_train_epochs: 3
+per_device_train_batch_size: 16
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-4
+eval_steps: 50
+max_seq_length: 512
+logging_steps: 10
+output_dir: "models/lora_adapter"
+report_to: "tensorboard"

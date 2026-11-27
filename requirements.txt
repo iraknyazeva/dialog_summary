@@ -5,3 +5,8 @@ transformers
 torch
 datasets
 vllm
+unsloth
+unsloth-zoo
+trl
+peft
+wandb
