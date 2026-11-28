@@ -1,9 +1,6 @@
 model_name: "Qwen/Qwen2.5-0.5B-Instruct"
 seed: 42
 
-# данные
-num_samples: 2500
-
 # LoRA
 r: 16
 lora_alpha: 32
@@ -19,4 +16,5 @@ eval_steps: 50
 max_seq_length: 512
 logging_steps: 10
 output_dir: "models/lora_adapter"
+logging_dir: "models/lora_adapter/logs"
 report_to: "tensorboard"

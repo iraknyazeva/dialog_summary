@@ -57,7 +57,7 @@ def main():
     )
 
     # train
-    train_df = pd.read_csv(data_cfg['train_path']).sample(lora_cfg['num_samples'], random_state=data_cfg['seed'])
+    train_df = pd.read_csv(data_cfg['train_path'])
     train_dataset = Dataset.from_pandas(train_df)
     train_dataset = train_dataset.map(
         lambda x: format_example(x, tokenizer),
@@ -87,6 +87,7 @@ def main():
             eval_strategy='steps',
             eval_steps=lora_cfg['eval_steps'],
             save_strategy='epoch',
+            logging_dir=lora_cfg.get('logging_dir', f"{lora_cfg['output_dir']}/logs"),
             report_to=lora_cfg['report_to'],
             seed=lora_cfg['seed'],
             max_seq_length=lora_cfg['max_seq_length'],

@@ -9,4 +9,4 @@ unsloth
 unsloth-zoo
 trl
 peft
-wandb
+tensorboard

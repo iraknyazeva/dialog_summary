@@ -106,7 +106,7 @@ def main():
             f.write(line + '\n')
 
     for i in range(min(5, len(predictions))):
-        print(f"Dialogue:\n{dialogues[i]}...")
+        print(f"Dialogue:\n{dialogues[i]}")
         print(f"\nReference:\n{references[i]}")
         print(f"\nGenerated summary:\n{predictions[i]}")
 
